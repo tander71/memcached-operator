@@ -50,12 +50,12 @@ type Memcached struct {
 }
 
 // MemcachedList contains a list of Memcached
-type MemcachedList struct {
-	metav1.TypeMeta `json:",inline"`
-	metav1.ListMeta `json:"metadata,omitempty"`
-	Items           []Memcached `json:"items"`
-}
-
+//type MemcachedList struct {
+//	metav1.TypeMeta `json:",inline"`
+//	metav1.ListMeta `json:"metadata,omitempty"`
+//	Items           []Memcached `json:"items"`
+//}
+//
 func init() {
-	SchemeBuilder.Register(&Memcached{}, &MemcachedList{})
+	SchemeBuilder.Register(&Memcached{})
 }
